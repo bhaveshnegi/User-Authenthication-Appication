@@ -30,20 +30,20 @@ const Register = () => {
     })
   }
   return (
-    <div>
-      <h1>Register Page</h1>
+    <div className="container">
+      <h1>Register</h1>
       <form onSubmit={handleRegisterSubmit}>
-        <label>Username:</label>
-        <input type='text' name='username' placeholder='enter username' value={registerData.username} onChange={handleRegisterChange} required/>
-        <label>Password:</label>
-        <input type='password' name='password' placeholder='enter password' value={registerData.password} onChange={handleRegisterChange} required/>
-        <button type='submit'>Register</button>
-        <p>Already Register
-          <Link to='/login'>Login Here</Link>
+        <label>Username</label>
+        <input type="text" name="username" value={registerData.username} onChange={handleRegisterChange} placeholder="Choose a username" required />
+        <label>Password</label>
+        <input type="password" name="password" value={registerData.password} onChange={handleRegisterChange} placeholder="Create a password" required />
+        <button type="submit">Register</button>
+        <p>
+          Already registered? <Link to="/login">Login here</Link>
         </p>
       </form>
     </div>
-  )
+  )  
 }
 
 export default Register

@@ -37,20 +37,21 @@ const Login = () => {
           password:'',
         })
     }
-  return (
-    <div>
-      <h1>Login Page</h1>
-      <form onSubmit={handleLoginSubmit}>
-        <input type='text' name='username' placeholder='username' value={logindata.username}required onChange={handleLoginChange}/>
-        <input type='password' name='password' placeholder='Password' value={logindata.password}required onChange={handleLoginChange}/>
-        <button type='submit'>Login</button>
-        <p>
-            Not register yet?
-            <Link to ='/register'>Register here </Link>
-        </p>
-      </form>
-    </div>
-  )
+    return (
+      <div className="container">
+        <h1>Login</h1>
+        <form onSubmit={handleLoginSubmit}>
+          <label>Username</label>
+          <input type="text" name="username" value={logindata.username} onChange={handleLoginChange} placeholder="Enter username" required />
+          <label>Password</label>
+          <input type="password" name="password" value={logindata.password} onChange={handleLoginChange} placeholder="Enter password" required />
+          <button type="submit">Login</button>
+          <p>
+            Not registered yet? <Link to="/register">Register here</Link>
+          </p>
+        </form>
+      </div>
+    )    
 }
 
 export default Login
