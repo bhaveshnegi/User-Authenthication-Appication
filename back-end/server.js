@@ -3,10 +3,14 @@ const app = express();
 const port = 8000;
 const connectDB=require('./db/dbConnection');
 const User = require('./db/user');
+const cors = require('cors');
+
 
 connectDB();
 
 app.use(express.json());
+
+app.use(cors())
 
 app.post('/register',async(req,res)=>{
     try {
